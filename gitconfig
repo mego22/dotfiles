@@ -1,0 +1,29 @@
+[color]
+  ui = auto
+
+[merge]
+  tool = vimdiff
+
+[core]
+  editor = vim
+  pager = less -r
+  excludesfile = ~/.gitignore_global
+
+[push]
+  default = tracking
+
+[advice]
+  statusHints = false
+
+[diff]
+  mnemonicprefix = true
+  algorithm = patience
+
+[format]
+  subjectprefix = git
+
+[rerere]
+  enabled = 1
+[user]
+	name = David James
+	email = david.james@phishme.com
