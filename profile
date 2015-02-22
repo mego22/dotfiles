@@ -33,7 +33,7 @@ alias puppet-librarian='librarian-puppet'
 alias vagrant_startover='vagrant destroy -f; vagrant up'
 
 # functions
-function gitrepos() { cd ~/github/"$@"; }
+function repos() { cd ~/github/"$@"; }
 function devops() { cd ~/github/phishme/devops/"$@"; }
 function triage() { cd ~/github/phishme/triage/"$@"; }
 
