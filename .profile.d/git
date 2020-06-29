@@ -1,0 +1,45 @@
+# git
+alias gcl='git clone'
+alias gst='git status'
+alias gco='git checkout'
+alias gadd='git add'
+alias gunadd='git reset'
+alias gcm='git commit -m'
+alias gcma='git commit -ma'
+alias ghist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+
+function gpo(){
+
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git push origin "${BRANCH}"
+
+}
+
+alias gdiff='git diff'
+alias goops='git reset --soft HEAD~1'
+alias gff='git merge --ff-only'
+
+function grefresh(){
+
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git fetch
+  git merge --ff-only origin "${BRANCH}"
+
+}
+
+function gbr(){
+
+  local BRANCH=$1
+
+  if [ -z ${BRANCH} ]; then 
+
+    echo "Branch not given."
+
+  else
+
+    git push origin :${BRANCH}
+    git branch -D ${BRANCH}
+
+  fi
+
+}

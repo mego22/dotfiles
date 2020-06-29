@@ -1,0 +1,22 @@
+# Exports
+
+export EDITOR=vi
+
+if [ -f ~/.config/hub_token ]; then source ~/.config/hub_token; fi
+
+#export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
+
+export PS1="\h:\w"
+export PS1="$PS1\$(git-radar --bash --fetch)\n$ "
+
+# PATH
+export PATH="~/repos/mego22/utilities:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+GPG1_DIR=$(brew --prefix gpg1)/libexec/gpgbin
+
+if [ -d "${GPG1_DIR}" ]; then
+  export PATH="${GPG1_DIR}:${PATH}"
+fi

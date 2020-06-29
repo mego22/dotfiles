@@ -1,0 +1,36 @@
+# make my life easier aliases
+alias ll="ls -l"
+alias x="exit"
+alias s="ssh"
+alias til="dig +short +search"
+alias tailf="tail -f"
+
+# thanks @abtreece
+alias c="clear"
+
+alias v="nvim"
+
+# A place to leave random notes.
+# This is not backed up
+alias scratch="vim ~/repos/mego22/notes/scratch.txt"
+alias notes="cd ~/repos/mego22/notes"
+
+# homebrew
+alias binstall="brew install"
+alias bcinstall="brew cask install"
+
+# vagrnat
+alias vdf="vagrant destroy -f"
+alias vup="vagrant up"
+alias vso='vagrant destroy -f; vagrant up'
+alias vssh='vagrant ssh'
+alias vactive="ps -ef | grep vagrant | grep -v grep | awk '{print $NF}'"
+
+# puppet
+alias puppet-librarian='librarian-puppet'
+
+# ansible
+alias ap='ansible-playbook'
+
+# start docker from terminal
+alias start_docker='open --hide --background -a Docker'

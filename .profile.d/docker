@@ -1,0 +1,66 @@
+# docker
+function dps () { 
+  docker ps "$@"
+}
+
+function di () {
+  docker images
+}
+
+function drm () {
+  docker rm "$@"
+}
+
+function drmi () {
+  docker rmi "$@"
+}
+
+function dit () {
+  docker run -itP --rm
+}
+
+function dexcon () {
+  docker rm -v $(docker ps -a -q -f "status=exited")
+}
+
+function ddimg () {
+  docker rmi $(docker images -f "dangling=true" -q)
+}
+
+function ddvol () {
+  docker volume rm $(docker volume ls -qf "dangling=true")
+}
+
+function dprune () {
+
+  for docker_resource in container image volume; do
+    echo "Pruning $docker_resource:"
+    docker "${docker_resource}" prune -f
+  done
+
+}
+
+# docker-compose
+function dcps () {
+ docker-compose ps
+}
+
+function dcup () {
+  docker-compose up
+}
+
+function dcdwn () {
+  docker-compose down
+}
+
+function dcbld () {
+  docker-compose build
+}
+
+function dcrun () {
+  docker-compose run
+}
+
+function dcconfig () {
+  docker-compose config
+}

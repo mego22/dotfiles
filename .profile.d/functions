@@ -1,0 +1,26 @@
+function weather () { 
+  curl wttr.in/Plainville,CT,US?format=1
+}
+
+function myip () {
+  curl -s ipinfo.io | \
+  grep ip | \
+  grep -v readme | \
+  cut -d\" -f4
+}
+
+function localip () {
+  ifconfig | \
+  awk '/en0:/,/status: active/' | \
+  grep inet | \
+  grep -v inet6 | \
+  awk '{print $2}'
+}
+
+mdv () {
+ ## Display the markdown file given
+ if ! command -v pandoc > /dev/null; then echo "Install pandoc."; return 1; fi
+ 
+ if [ -z "${@}" ]; then echo "Need a file to view."; return 1; fi
+ pandoc -f markdown -t plain ${@}
+}

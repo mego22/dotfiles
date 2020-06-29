@@ -1,0 +1,45 @@
+# bash_completions
+
+function repos() { cd ~/repos/$1; }
+_repos() {
+    local cur opts
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    opts=$(cd ~/repos ; ls -d */. | sed 's|/./||')
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+}
+complete -F _repos repos
+
+mego22() { cd ~/repos/mego22/$1; }
+_mego22() {
+    local cur opts
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    opts=$(cd ~/repos/mego22 ; ls -d */. | sed 's|/./||')
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+}
+complete -F _mego22 mego22
+
+### Tab through make targets
+_makefile_completions() {
+  if [ ! -e ./Makefile ]; then
+    return
+  fi
+    
+  # filter out flag arguments
+  filtered_comp_words=()
+  for comp_word in ${COMP_WORDS[@]}; do
+    if [[ $comp_word != -* ]]; then
+      filtered_comp_words+=("$comp_word")
+    fi
+  done
+    
+  # do nothing if a non-flag argument has already been added
+  if [[ "${#filtered_comp_words[@]}" -gt 2 ]]; then
+    return
+  fi
+    
+  word_list="$(grep '^[^\.][-a-zA-Z\.0-9_\/]*:' ./Makefile | sed 's/:.*//g' | uniq)" 
+
+  COMPREPLY=($(compgen -W "${word_list}" "${filtered_comp_words[1]}"))
+}
+    
+complete -o nospace -F _makefile_completions make
