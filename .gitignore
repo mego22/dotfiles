@@ -52,6 +52,8 @@ Public/
 .terraform.d/
 .tmux/
 .vagrant.d/
+.vim/
+.viminfo
 Brewfile
 repos/
 tmp/
