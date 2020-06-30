@@ -22,6 +22,7 @@ Public/
 .bash_sessions/
 .bundle/
 .cache/
+.config/
 .cups/
 .docker/
 .dropbox/
