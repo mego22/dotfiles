@@ -55,6 +55,7 @@ Public/
 .vagrant.d/
 .vim/
 .viminfo
+.vscode
 Brewfile
 repos/
 tmp/
