@@ -49,6 +49,7 @@ Public/
 .swn
 .swo
 *.swp
+.swl
 .swt/
 .terraform.d/
 .tmux/
