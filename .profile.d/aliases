@@ -4,6 +4,7 @@ alias x="exit"
 alias s="ssh"
 alias til="dig +short +search"
 alias tailf="tail -f"
+alias arin="whois -h whois.arin.net"
 
 # thanks @abtreece
 alias c="clear"
