@@ -5,3 +5,5 @@
 	email = djames@spreedly.com
 [credential]
 	helper = osxkeychain
+[pull]
+	ff = only
