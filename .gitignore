@@ -31,6 +31,7 @@ Public/
 .gcalcli_oauth
 .geeknote/
 .gem/
+.gitcommitmessage.txt
 .gnupg/
 .httpie/
 .inspec/
