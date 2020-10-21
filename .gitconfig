@@ -7,3 +7,5 @@
 	helper = osxkeychain
 [pull]
 	ff = only
+[commit]
+	template = ~/.gitcommitmessage.txt
