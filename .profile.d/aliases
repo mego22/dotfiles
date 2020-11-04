@@ -35,3 +35,6 @@ alias ap='ansible-playbook'
 
 # start docker from terminal
 alias start_docker='open --hide --background -a Docker'
+
+# docker images
+alias jq='docker run -i --rm ghcr.io/mego22/jq'
