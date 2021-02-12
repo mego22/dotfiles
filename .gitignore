@@ -41,6 +41,7 @@ Brewfile.lock.json
 .lesshst
 .local/
 .lpass/
+.microk8s/
 .minikube/
 .netrc
 .op/
