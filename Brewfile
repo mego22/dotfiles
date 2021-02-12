@@ -22,16 +22,16 @@ brew "git-crypt"
 brew "michaeldfallen/formula/git-radar"
 
 brew "asdf"
-
-## aws tools
-brew "awscli"
-
 brew "aspell"
-brew "openssl"
+brew "awscli"
 brew "curl"
 brew "direnv"
 brew "blueutil"
+brew "docker-machine-driver-xhyve"
 brew "dockutil"
+brew "gnupg2"
+brew "lastpass-cli"
+brew "openssl"
 brew "openssl@1.1"
 
 # Casks
@@ -41,6 +41,7 @@ cask "bartender"
 cask "dash"
 cask "docker"
 cask "evernote"
+cask "lastpass"
 cask "slack"
 cask "witch"
 cask "zoomus"
