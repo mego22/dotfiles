@@ -10,6 +10,7 @@ Pictures/
 Public/
 .CFUserTextEncoding
 .DS_Store
+.actrc
 .ansible-playbook-commands.log
 .ansible.cfg
 .ansible/
