@@ -33,10 +33,7 @@ function ddvol () {
 
 function dprune () {
 
-  for docker_resource in container image volume; do
-    echo "Pruning $docker_resource:"
-    docker "${docker_resource}" prune -f
-  done
+  docker system prune -a --volumes
 
 }
 

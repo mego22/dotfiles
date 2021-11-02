@@ -15,8 +15,11 @@ export PATH="~/repos/mego22/utilities:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-GPG1_DIR=$(brew --prefix gpg1)/libexec/gpgbin
+if [ "$(uname)" == "Darwin" ]; then
+  GPG1_DIR=$(brew --prefix gpg1)/libexec/gpgbin
 
-if [ -d "${GPG1_DIR}" ]; then
-  export PATH="${GPG1_DIR}:${PATH}"
+  if [ -d "${GPG1_DIR}" ]; then
+    export PATH="${GPG1_DIR}:${PATH}"
+  fi
+
 fi
