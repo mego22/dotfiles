@@ -1,0 +1,5 @@
+[user]
+  name = David James
+  email = djames@spreedly.com
+[commit]
+  template = ~/.gitcommitmessage.txt
