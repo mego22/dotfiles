@@ -11,8 +11,8 @@
 [includeIf "gitdir:/home"]
     path = ~/.gitconfig-linux
 
-[includeIf "gitdir:~/repos/work/"]
-    path = ~/.gitconfig-work
+[includeIf "gitdir:~/dev/spreedly/"]
+    path = ~/.gitconfig-spreedly
 
 [color]
     ui = auto
